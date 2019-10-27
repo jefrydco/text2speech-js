@@ -1,0 +1,1 @@
+export const isExists = obj => obj !== null && typeof obj !== 'undefined'

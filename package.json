@@ -1,0 +1,23 @@
+{
+  "name": "text2speech-js",
+  "version": "0.0.1",
+  "description": "Wrapper around browser Text to Speech API",
+  "main": "dist/index.esm.min.js",
+  "author": "@jefrydco",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "bili && cp dist/index.umd.min.* examples"
+  },
+  "devDependencies": {
+    "bili": "^4.8.1"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "text to speech",
+    "tts",
+    "speech"
+  ]
+}

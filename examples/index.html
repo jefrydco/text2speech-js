@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text to Speech Example</title>
+</head>
+<body>
+  <textarea cols="30" rows="10"></textarea>
+  <br>
+  <button class="play">Play</button>
+  <button class="pause">Pause</button>
+  <button class="resume">Resume</button>
+  <button class="stop">Stop</button>
+  <script src="./index.umd.min.js"></script>
+  <script>
+    const play = document.querySelector('.play')
+    const pause = document.querySelector('.pause')
+    const resume = document.querySelector('.resume')
+    const stop = document.querySelector('.stop')
+
+    const textarea = document.querySelector('textarea')
+
+    const tts = TextToSpeech.isSupported() ? new TextToSpeech() : new Error('Web Speech API is not supported')
+
+    play.addEventListener('click', () => {
+      const text = textarea.value
+
+      tts.text = text
+      tts.speak()
+    })
+
+    pause.addEventListener('click', () => {
+      tts.pause()
+    })
+
+    resume.addEventListener('click', () => {
+      tts.resume()
+    })
+
+    stop.addEventListener('click', () => {
+      tts.stop()
+    })
+
+  </script>
+</body>
+</html>
