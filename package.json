@@ -1,6 +1,6 @@
 {
   "name": "text2speech-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrapper around browser Text to Speech API",
   "main": "dist/index.esm.min.js",
   "author": "@jefrydco",
