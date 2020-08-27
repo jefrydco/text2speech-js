@@ -10,7 +10,7 @@
     "build": "bili && cp dist/index.umd.min.* examples"
   },
   "devDependencies": {
-    "bili": "^4.8.1"
+    "bili": "^5.0.5"
   },
   "files": [
     "dist/*"
